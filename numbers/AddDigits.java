@@ -6,7 +6,19 @@ public class AddDigits {
 
 	@Test
 	public void TC1() {
-		int num = 10;
+		int num = 38;
+		System.out.println(some(num));
+	}
+	
+	@Test
+	public void TC2() {
+		int num = 1;
+		System.out.println(some(num));
+	}
+	
+	@Test
+	public void TC3() {
+		int num = 0;
 		System.out.println(some(num));
 	}
 
