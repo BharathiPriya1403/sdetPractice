@@ -9,6 +9,24 @@ public class Pyramid {
 		int n = 2;
 		printPyramid(n);
 	}
+	
+	@Test
+	public void TC2() {
+		int n = 5;
+		printPyramid(n);
+	}
+	
+	@Test
+	public void TC3() {
+		int n = 1;
+		printPyramid(n);
+	}
+	
+	@Test
+	public void TC4() {
+		int n = -1;
+		printPyramid(n);
+	}
 
 	public void printPyramid(int n) {
 
