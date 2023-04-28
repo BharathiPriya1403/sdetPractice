@@ -9,10 +9,9 @@ public class Number69 {
 	 * SC -O(1)
 	 * 
 	 * Pseudo code:
-	 * convert the int to string 
-	 * and check the whether first index is 6 if so change to 9 and return the ans 
-	 * initialize a boolean flag to check if we have replaced 6 with 9
-	 * 
+	 *convert int to string to char array  
+	 * for loop - if i = 6 convert to 9 and break 
+	 * convert the char array to string and return as int
 	 */
 	
 	@Test
