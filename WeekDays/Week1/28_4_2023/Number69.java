@@ -57,19 +57,44 @@ public class Number69 {
 //       return Integer.valueOf(ans);      
 //    }
 	
-	public int maximum69Number (int num) {
+// 	public int maximum69Number (int num) {
 
-        String s = String.valueOf(num);
-        char[] ch = s.toCharArray();
+//         String s = String.valueOf(num);
+//         char[] ch = s.toCharArray();
         
-        for(int i = 0 ; i<ch.length;i++) {
-        	if(ch[i]=='6') {
-        		ch[i]='9';
-        		break;
-        	}
-        }
+//         for(int i = 0 ; i<ch.length;i++) {
+//         	if(ch[i]=='6') {
+//         		ch[i]='9';
+//         		break;
+//         	}
+//         }
         
-       return Integer.parseInt(String.valueOf(ch));
+//        return Integer.parseInt(String.valueOf(ch));
+		
+		public int maximum69Number (int num) {
+		
+		int max = num ;
+		int prevTotal = 0;
+		int mul = 1;
+		
+		while(num>9) {
+			int digits = num%10;
+			int quotient = num/10;
+			prevTotal += digits*mul;
+			if(digits == 6) {
+				int temp = (quotient*10*mul) + (prevTotal+ (3*mul));
+				max = Math.max(max, temp);
+			}
+			num = quotient;
+			mul = mul*10;
+		}
+		
+		if(num == 6) {
+			int temp = (9*mul) + (prevTotal);
+			max = Math.max(max, temp);
+		}
+			
+		return max;
        
        
     }
