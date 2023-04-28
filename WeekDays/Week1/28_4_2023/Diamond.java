@@ -3,6 +3,11 @@ package patternProblems;
 import org.testng.annotations.Test;
 
 public class Diamond {
+	
+	/**
+	 * TC -O((char-'A')^2)
+	 * SC - O(1)
+	 */
 
 	@Test
 	public void TC1() {
