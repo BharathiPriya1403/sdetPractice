@@ -12,6 +12,9 @@ public class MoveZero {
 	 * 
 	 *TC - O(n)
 	 *SC - O(1)
+	 *
+	 *Note: i = 0 , j =1 will not work if there is only 2 number in an array and if j!=0 it will swap the numbers and order will change 
+	 *Hence starting both with 0
 	 */
 
 	@Test
