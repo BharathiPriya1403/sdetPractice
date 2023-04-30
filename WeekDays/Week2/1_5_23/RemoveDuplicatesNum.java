@@ -30,43 +30,43 @@ public class RemoveDuplicatesNum {
 
 		int i = 0;
 		int j = 1;
-		int prev = 102;
+		int prev = -102;
 		int count = 0 ;
 
 		while (i<nums.length && j < nums.length) {
 
 			if (nums[i] == nums[j]) {
-				nums[j] = 102;
+				nums[j] = -102;
 				prev = nums[i];
 				count++;
 			} else if (prev == nums[j]) {
 				prev = nums[j];
-				nums[j] = 102;
+				nums[j] = -102;
 				count++;
 			}
 			i++;
 			j++;
 		}
-		Arrays.sort(nums); 
-		System.out.println(Arrays.toString(nums));
+		//Arrays.sort(nums); 
+		//System.out.println(Arrays.toString(nums));
 		return nums.length - count;
 
 	}
 
-//	public void moveZeroes(int[] nums) {
-//		int i = 0;
-//		int j = 0;
-//		
-//		while (i < nums.length && j < nums.length) {
-//			if (nums[j] != -102) {
-//				int temp = nums[i];
-//				nums[i] = nums[j];
-//				nums[j] = temp;
-//				i++;
-//			}
-//			j++;
-//		}
+	public void moveZeroes(int[] nums) {
+		int i = 0;
+		int j = 0;
 		
-//}
+		while (i < nums.length && j < nums.length) {
+			if (nums[j] != -102) {
+				int temp = nums[i];
+				nums[i] = nums[j];
+				nums[j] = temp;
+				i++;
+			}
+			j++;
+		}
+		
+}
 
 }
