@@ -14,7 +14,11 @@ public class SingleNumber {
 	 * 
 	 * TC - O(n^2)
 	 * SC - O(1)
-	 * 
+	 *
+	 *optimised solution
+	 *XOR the ans 
+	 * TC - O(n)
+	 *SC - O(1)
 	 */
 	
 	
@@ -25,20 +29,27 @@ public class SingleNumber {
 	}
 	
 	
-	public int singleNumber(int[] nums) {
-	      for(int i = 0 ; i < nums.length ; i++){
-	          int count = 0 ;
-	          for(int j = 0 ; j<nums.length; j++){
-	              if(nums[i]==nums[j] ){
-	                   count++;
-	              }
-	          }
+// 	public int singleNumber(int[] nums) {
+// 	      for(int i = 0 ; i < nums.length ; i++){
+// 	          int count = 0 ;
+// 	          for(int j = 0 ; j<nums.length; j++){
+// 	              if(nums[i]==nums[j] ){
+// 	                   count++;
+// 	              }
+// 	          }
 
-	          if(count == 1)
-	          return nums[i];
-	      }
-	      return 0;
-	    }
+// 	          if(count == 1)
+// 	          return nums[i];
+// 	      }
+// 	      return 0;
+// 	    }
 	
+    public int singleNumber(int[] nums) {
+    int ans = 0;
+    for(int i = 0; i < nums.length; i++){
+        ans ^= nums[i];
+        }
+        return ans;
+    }
 	
 }
