@@ -42,7 +42,7 @@ public class FlowerBed {
 	@Test
 	public void TC5() {
 		int[] arr = {0};
-		int n = 2;
+		int n = 3;
 		System.out.println(solveFlower(arr,n));
 	}
 
