@@ -73,43 +73,21 @@ public class FlowerBed {
 	*/
 	
 	
-//	public boolean solveFlower(int[] flowerbed,int n) {
-//		
-//		for (int i = 0; i < flowerbed.length; i++) {
-//			
-//			if(flowerbed[i]==0 && (i==0 || flowerbed[i-1]==0) && (i == flowerbed.length-1|| flowerbed[i+1] == 0)) {
-//				flowerbed[i] = 1;
-//				n--;
-//			}
-//		}
-//		
-//		return n==0  ;
-//	
-//	}
-	
 	public boolean solveFlower(int[] flowerbed,int n) {
 		
 		for (int i = 0; i < flowerbed.length; i++) {
-				
-			if( (i-1>=0 && i+1<=flowerbed.length-1 && checkFlower(i-1, i, i+1, flowerbed))|| (i+1<=flowerbed.length-1 && checkFlower(i, i, i+1, flowerbed)) || (i-1>=0 && checkFlower(i-1, i, i, flowerbed))) {
+			
+			if(flowerbed[i]==0 && (i==0 || flowerbed[i-1]==0) && (i == flowerbed.length-1|| flowerbed[i+1] == 0)) {
+				flowerbed[i] = 1;
 				n--;
-				flowerbed[i]=1;
 			}
 		}
-		return n==0;
+		
+		return n==0  ;
+	
 	}
 	
-	public boolean checkFlower(int left , int mid , int right , int[] arr) {
-		
-		//if(left<0 || left>=arr.length || right<0 || right>=arr.length || mid<0 || mid>=arr.length) return false;
-		
-		//if(mid<0 || mid>=arr.length) return false;
-		
-		if(arr[left]==0 && arr[right]==0 && arr[mid]==0) return true;
-		
-		return false;
-		
-	}
+	
 	
 }
 
