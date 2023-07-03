@@ -10,7 +10,6 @@ public class CheckImplementationDLL {
 		ListNode h = DoublyLinkedList.create(arr);
 		DoublyLinkedList dLL = new DoublyLinkedList(h);
 		System.out.println(dLL.getElement(2));
-		System.out.println("---------------");
 	}
 	
 	@Test
